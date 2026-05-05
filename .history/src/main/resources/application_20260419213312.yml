@@ -1,0 +1,23 @@
+server:
+  port: 5001
+  url: http://localhost:5001
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://sqlserver:1433;databaseName=agro_pacayales;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: SqlPassword2026!
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: update # Puede ser 'create', 'update', 'validate' o 'none'
+    show-sql: false # Puede true o false, para ver las consultas SQL en consola
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html # Ruta para acceder a Swagger UI: http://localhost:5001/swagger-ui.html
